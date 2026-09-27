@@ -1,0 +1,82 @@
+# ==========================================
+# fa8ix theme — GRUB
+# Layout: 2560-wide screens; proportional 16:9 / 16:10 background
+# ==========================================
+
+# Global properties
+title-text: ""
+desktop-image: "background.jpg"
+desktop-image-scale-method: "crop"
+desktop-image-h-align: "center"
+desktop-image-v-align: "top"
+desktop-color: "#000000"
+
+# Terminal
+terminal-font: "DejaVu Sans Regular 24"
+terminal-box: "terminal_box_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
+# Welcome
++ label {
+    top = 11%
+    left = 15%
+    width = 70%
+    align = "center"
+
+    text = "Welcome"
+    color = "#828282"
+    font = "DejaVu Sans Regular 64"
+}
+
+# Instructions
++ label {
+    top = 19%
+    left = 15%
+    width = 70%
+    align = "center"
+
+    text = "Select an operating system"
+    color = "#828282"
+    font = "DejaVu Sans Regular 36"
+}
+
+# Boot menu
++ boot_menu {
+    left = 25%
+    top = 26%
+    width = 55%
+    height = 400
+
+    item_font = "DejaVu Sans Regular 30"
+
+    item_color = "#949494"
+    selected_item_color = "#ffffff"
+
+    icon_width = 60
+    icon_height = 60
+    item_icon_space = 28
+
+    item_height = 74
+    item_padding = 8
+    item_spacing = 12
+
+    selected_item_pixmap_style = "select_*.png"
+}
+
+# Countdown
++ label {
+    top = 90%
+    left = 15%
+    width = 70%
+    align = "center"
+
+    id = "__timeout__"
+    text = "Booting in %d seconds"
+
+    color = "#949494"
+    font = "DejaVu Sans Regular 24"
+}
